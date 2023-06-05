@@ -9,6 +9,17 @@ const
 type
   size_t = PtrUInt;
   PChar = PAnsiChar;
+  
+    //Возможные типы событий
+  webui_events = (
+    WEBUI_EVENT_DISCONNECTED, // 0. Событие отключения окна
+    WEBUI_EVENT_CONNECTED, // 1. Событие подключения окна
+    WEBUI_EVENT_MULTI_CONNECTION, // 2. Событие нового подключения окна
+    WEBUI_EVENT_UNWANTED_CONNECTION, // 3. Событие нового нежелательного подключения окна
+    WEBUI_EVENT_MOUSE_CLICK, // 4. Событие клика мыши
+    WEBUI_EVENT_NAVIGATION, // 5. Событие навигации окна
+    WEBUI_EVENT_CALLBACK // 6. Событие вызова функции
+  );
 
   // Структура события
   Pwebui_event_t = ^webui_event_t;
